@@ -6,7 +6,7 @@ function AddCarrinho(id) {
   var Quantidade = document.getElementById(id);
   if (Quantidade <= 0){
     CiarElemento(id, Quantidade.value);  
-  }{else{
+  }else{
 
   }; 
   
