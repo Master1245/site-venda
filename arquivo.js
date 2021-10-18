@@ -2,8 +2,14 @@
 
 
 function AddCarrinho(id) {
+  
   var Quantidade = document.getElementById(id);
-  CiarElemento(id, Quantidade.value);
+  if (Quantidade <= 0){
+    CiarElemento(id, Quantidade.value);  
+  }{else{
+
+  }; 
+  
   var adicionar = VerificarExistente(carrinho);
   if (adicionar == []){
     for (let itens of adicionar){
