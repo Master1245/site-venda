@@ -85,12 +85,17 @@ li{
     width: 1170px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between
 }
 
 .produtos div{
     margin: 15px;
     padding-top: 15px;
 
+}
+
+.produtos p{
+    justify-content: center;
 }
 
 .conteudo p{
@@ -133,5 +138,4 @@ li{
 
 .carrinho li{
     margin: 15px;
-    margin-left: ;
 }
