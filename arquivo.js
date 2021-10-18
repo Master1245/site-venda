@@ -1,15 +1,13 @@
 
-
-
 function AddCarrinho(id) {
   var Quantidade = document.getElementById(id);
-  CiarElemento(id, Quantidade.value);
-  var adicionar = VerificarExistente(carrinho);
-  if (adicionar == []){
-    for (let itens of adicionar){
-      CiarElemento(itens);
+    CiarElemento(id, Quantidade.value );
+    var adicionar = VerificarExistente(carrinho);
+    if (adicionar == []){
+      for (let itens of adicionar){
+        CiarElemento(itens);
+      };
     };
-  };
 };
 
 function CiarElemento(id,dados){
@@ -40,7 +38,6 @@ function VerificarExistente(id) {
     while (i < total) {
       itemI = itens[i].innerText;
       itemI = itemI.replace(/[0-9]+/, '');
-      console.log(itemI)
       if (itemP == itemI){
         itens[p].parentNode.removeChild(itens[p]);
       };
