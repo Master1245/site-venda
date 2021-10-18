@@ -85,13 +85,13 @@ li{
     width: 1170px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between
+    justify-content: space-between;
+    display: inline-flex;
 }
 
 .produtos div{
     margin: 15px;
     padding-top: 15px;
-
 }
 
 .produtos p{
