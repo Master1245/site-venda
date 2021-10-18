@@ -8,10 +8,11 @@ body, html{
 .container{
     display: grid;
     grid-template-rows: 15% 85%;
-    grid-template-columns: 10% 80% 10%;
+    grid-template-columns: 10% 75% 15%;
     grid-auto-flow: row;
     grid-template-areas: 
         "logo logo logo"
+        "men conteudo carrinho"
         "men conteudo carrinho"
         "men conteudo carrinho";
 }
@@ -76,23 +77,20 @@ li{
     color: white;
     padding: 20px 5px 20px 5px;
     text-align: justify;
-    grid-auto-flow: row;
 }
 
-
-.conteudo ul{
+.produtos {
+    margin: 0;
+    padding: 0;
+    width: 1170px;
     display: flex;
-    text-align: center;
-    padding-left: 0;
-    text-align: justify;
-    grid-auto-flow: row;
+    flex-wrap: wrap;
 }
 
-.conteudo li{
-    margin: 20px;
-    margin-left: 12px;
-    margin-bottom: 0;
-    text-align: center;
+.produtos div{
+    margin: 15px;
+    padding-top: 15px;
+
 }
 
 .conteudo p{
@@ -103,7 +101,7 @@ li{
 .conteudo button{
     width: 20px;
     height: 22px;
-    margin: 0 5px 0 5px;
+    margin: 0 5px 0 5px; 
 }
 
 .conteudo .AddCarrinho{
@@ -125,7 +123,6 @@ li{
 }
 
 
-
 .carrinho{
     grid-area: carrinho;
     background: black;
@@ -136,4 +133,5 @@ li{
 
 .carrinho li{
     margin: 15px;
+    margin-left: ;
 }
