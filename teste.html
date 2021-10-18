@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="jquery-1.11.3.min.js"></script>
+    <title>Site</title>
+    <script type="text/javascript" src="arquivo.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="logo">
+            <a class="logoA" href="">LOGO</a>
+            <ul>
+                <li><a href="">INICIO</a></li>
+                <li><a href="">SOBRE</a></li>
+            </ul>
+        </header>
+
+        <menu class="menu">
+            <ul>
+                <li><a href="">Pedidos</a></li>
+                <li><a href="">Fechar Conta</a></li>
+                <li><a href="">Produtos</a></li>
+            </ul>
+        </menu>
+
+        <conteudo class="conteudo">
+            <ul class="lista2" id="lista2">
+                <li class="iten">
+                    <p id="nome 1">CARNE</p> 
+                    <button type="button" id="menos 1" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="1"></input>
+                    <button type="button" id="mais 1" onclick="more(this.id)">+ </button>
+                    <button type="button" id=1 class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+
+                <li class="iten">
+                    <p id="nome 2">OVO</p>
+                    <button type="button" id="menos 2" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="2"></input>
+                    <button type="button" id="mais 2" onclick="more(this.id)">+ </button>
+                    <button type="button" id="2" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+                
+                <li class="iten">
+                    <p id="nome 3">LEITE</p> 
+                    <button type="button" id="menos 3" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="3"> </input>
+                    <button type="button" id="mais 3" onclick="more(this.id)">+ </button>
+                    <button type="button" id="3" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+
+                <li class="iten">
+                    <p id="nome 4">ACUÇAR</p> 
+                    <button type="button" id="menos 4" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="4"> </input>
+                    <button type="button" id="mais 4" onclick="more(this.id)">+ </button>
+                    <button type="button" id="4" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+                
+                <li class="iten">
+                    <p id="nome 5">SAL</p> 
+                    <button type="button" id="menos 5" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="5"> </input>
+                    <button type="button" id="mais 5" onclick="more(this.id)">+ </button>
+                    <button type="button" id="5" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+                
+                <li class="iten">
+                    <p id="nome 6">FRANGO</p> 
+                    <button type="button" id="menos 6" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="6"> </input>
+                    <button type="button" id="mais 6" onclick="more(this.id)">+ </button>
+                    <button type="button" id="6" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+                
+                <li class="iten">
+                    <p id="nome 7">SABÃO</p>
+                    <button type="button" id="menos 7" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="7"> </input>
+                    <button type="button" id="mais 7" onclick="more(this.id)">+ </button>
+                    <button type="button" id="7" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+                
+                <li class="iten">
+                    <p id="nome 8">ESCOVA</p> 
+                    <button type="button" id="menos 8" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="8"> </input>
+                    <button type="button" id="mais 8" onclick="more(this.id)">+ </button>
+                    <button type="button" id="8" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+
+            </ul>
+
+            <ul class="lista2" id="lista2">
+                <li class="iten">
+                    <p id="nome 1">CARNE</p> 
+                    <button type="button" id="menos 1" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="1"></input>
+                    <button type="button" id="mais 1" onclick="more(this.id)">+ </button>
+                    <button type="button" id=1 class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+
+                <li class="iten">
+                    <p id="nome 2">OVO</p>
+                    <button type="button" id="menos 2" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="2"></input>
+                    <button type="button" id="mais 2" onclick="more(this.id)">+ </button>
+                    <button type="button" id="2" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+                
+                <li class="iten">
+                    <p id="nome 3">LEITE</p> 
+                    <button type="button" id="menos 3" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="3"> </input>
+                    <button type="button" id="mais 3" onclick="more(this.id)">+ </button>
+                    <button type="button" id="3" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+
+                <li class="iten">
+                    <p id="nome 4">ACUÇAR</p> 
+                    <button type="button" id="menos 4" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="4"> </input>
+                    <button type="button" id="mais 4" onclick="more(this.id)">+ </button>
+                    <button type="button" id="4" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+                
+                <li class="iten">
+                    <p id="nome 5">SAL</p> 
+                    <button type="button" id="menos 5" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="5"> </input>
+                    <button type="button" id="mais 5" onclick="more(this.id)">+ </button>
+                    <button type="button" id="5" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+                
+                <li class="iten">
+                    <p id="nome 6">FRANGO</p> 
+                    <button type="button" id="menos 6" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="6"> </input>
+                    <button type="button" id="mais 6" onclick="more(this.id)">+ </button>
+                    <button type="button" id="6" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+                
+                <li class="iten">
+                    <p id="nome 7">SABÃO</p>
+                    <button type="button" id="menos 7" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="7"> </input>
+                    <button type="button" id="mais 7" onclick="more(this.id)">+ </button>
+                    <button type="button" id="7" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+                
+                <li class="iten">
+                    <p id="nome 8">ESCOVA</p> 
+                    <button type="button" id="menos 8" onclick="less(this.id)">- </button> 
+                    <input value="0" type="text" id="8"> </input>
+                    <button type="button" id="mais 8" onclick="more(this.id)">+ </button>
+                    <button type="button" id="8" class="AddCarrinho" onclick="AddCarrinho(this.id)">ADICIONAR</button>
+                </li>
+            </ul>
+        </conteudo>
+
+        <carrinho class="carrinho">
+            <ul id ="carrinho">
+            </ul>
+        </carrinho>
+    </div>
+</body>
+</html>

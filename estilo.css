@@ -1,0 +1,139 @@
+body, html{
+    padding: 0;
+    margin: 0;
+    background-color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 15% 85%;
+    grid-template-columns: 10% 80% 10%;
+    grid-auto-flow: row;
+    grid-template-areas: 
+        "logo logo logo"
+        "men conteudo carrinho"
+        "men conteudo carrinho";
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.logo{
+    grid-area: logo;
+    background-color: black;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+.logoA{
+    flex-wrap: wrap;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo ul{
+    flex-wrap: wrap;
+    display: flex;
+    float: right;
+    margin-right: 40px;
+}
+
+.logo ul a{
+    margin: 10px;
+}
+
+.menu{
+    grid-area: men;
+    background: black;
+    color: white;
+    padding: 20px 0px 20px 0;
+    text-align: justify;
+    margin: 0;
+}
+
+.menu ul{
+    padding-left: 7px;
+    margin-top: 20px;
+}
+
+.menu li{
+    padding-top: 25px;
+    margin-top: 30px;
+}
+
+.conteudo{
+    grid-area: conteudo;
+    background: black;
+    color: white;
+    padding: 20px 5px 20px 5px;
+    text-align: justify;
+    grid-auto-flow: row;
+}
+
+
+.conteudo ul{
+    display: flex;
+    text-align: center;
+    padding-left: 0;
+    text-align: justify;
+    grid-auto-flow: row;
+}
+
+.conteudo li{
+    margin: 20px;
+    margin-left: 12px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.conteudo p{
+    display: flex;
+    margin-bottom: 0px;
+}
+
+.conteudo button{
+    width: 20px;
+    height: 22px;
+    margin: 0 5px 0 5px;
+}
+
+.conteudo .AddCarrinho{
+    display: block;
+    width: 100px;
+    margin-top: 12px;
+}
+
+.conteudo input{
+    background: white;
+    color: black;
+    border: none;
+    text-align: center;
+    border-radius: 50px;
+    width: 25px;
+    height: 25px;
+    margin-top: 12px;
+    margin-left: 5px;
+}
+
+
+
+.carrinho{
+    grid-area: carrinho;
+    background: black;
+    color: white;
+    padding: 60px 0px 30px 0px;
+    text-align: justify;
+}
+
+.carrinho li{
+    margin: 15px;
+}
