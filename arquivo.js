@@ -2,7 +2,7 @@
 function AddCarrinho(id) {
   var Quantidade = document.getElementById(id);
   validador = isNumber(Quantidade.value);
-  
+
   if (validador == false){
     console.log("Favor colocar um numero valido");
     document.getElementById(id).value = 0; 
