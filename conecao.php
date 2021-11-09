@@ -1,23 +1,43 @@
 <?php
-$servername = "localhost";
-$database = "mercado";
-$username = "root";
-$password = "9970";
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
-// Check connection
-if (!$conn) {
-      die("Connection failed: " . mysqli_connect_error());
-}
- 
-echo "Connected successfully";
- 
-$sql = "SELECT * FROM produtos";
-if (mysqli_query($conn, $sql)) {
-    echo $sql;
-      echo "New record created successfully";
-} else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-mysqli_close($conn);
+$host = "localhost";
+$db = "mercado";
+$user = "root";
+$pass = "9970";
+
+$con = mysql_pconnect($host, $user, $pass) or trigger_error(mysql_error(),E_USER_ERROR);
+// seleciona a base de dados em que vamos trabalhar
+mysql_select_db($db, $con);
+// cria a instrução SQL que vai selecionar os dados
+$query = sprintf("SELECT nome, preco FROM produtos");
+// executa a query
+$dados = mysql_query($query, $con) or die(mysql_error());
+// transforma os dados em um array
+$linha = mysql_fetch_assoc($dados);
+// calcula quantos dados retornaram
+$total = mysql_num_rows($dados);
+?>
+
+<html>
+	<head>
+	<title>Exemplo</title>
+</head>
+<body>
+<?php
+	// se o número de resultados for maior que zero, mostra os dados
+	if($total > 0) {
+		// inicia o loop que vai mostrar todos os dados
+		do {
+?>
+			<p><?=$linha['nome']?> / <?=$linha['preco']?></p>
+<?php
+		// finaliza o loop que vai mostrar os dados
+		}while($linha = mysql_fetch_assoc($dados));
+	// fim do if
+	}
+?>
+</body>
+</html>
+<?php
+// tira o resultado da busca da memória
+mysql_free_result($dados);
 ?>
