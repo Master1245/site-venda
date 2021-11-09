@@ -1,13 +1,26 @@
 
 function AddCarrinho(id) {
   var Quantidade = document.getElementById(id);
-    CiarElemento(id, Quantidade.value );
-    var adicionar = VerificarExistente(carrinho);
-    if (adicionar == []){
-      for (let itens of adicionar){
-        CiarElemento(itens);
+  validador = isNumber(Quantidade.value);
+  
+  if (validador == false){
+    console.log("Favor colocar um numero valido");
+    document.getElementById(id).value = 0; 
+  }else{
+    if (Quantidade.value > 0){
+      console.log("entrou");
+      CiarElemento(id, Quantidade.value );
+      var adicionar = VerificarExistente(carrinho);
+      if (adicionar == []){
+        for (let itens of adicionar){
+          CiarElemento(itens);
+        };
       };
+      document.getElementById(id).value = 0; 
+    }else{
+      console.log("Impossivel colocar 0 no carrinho");
     };
+  };
 };
 
 function CiarElemento(id,dados){
@@ -73,3 +86,7 @@ function setValue(value, id) {
     document.getElementById(id).value = value;
   };
 };
+
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
